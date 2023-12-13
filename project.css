@@ -1,0 +1,157 @@
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* Для десктопних екранів */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+/* Для мобільних екранів */
+@media screen and (max-width: 768px) {
+    .header {
+        padding-left: 0; /* Знімаємо відступ для мобільних екранів */
+    }
+    
+    /* Сховати навігацію на мобільних екранах */
+    .main, .aboutUs, .contacts {
+        display: none;
+    }
+}
+
+
+.login{
+    background-color: rgb(103, 103, 234);
+    color: white;
+    border-radius: 15%;
+    width: 100px;
+    height: 30px;
+}
+
+.photo{
+ height:250px ;
+width: 400px;
+border-radius: 3% 3% 0% 0%;
+}
+
+.main{
+    margin-right: 100px;
+}
+
+.contacts{
+margin-left: 100px;
+
+
+}
+
+.register{
+    width: 400px;
+    margin-top: 5px;
+height: 30px;
+   border: none;
+}
+
+.discount{
+    position: absolute;
+
+  top: 50px; /* Відстань від верхнього краю .image-container */
+  right: 1080px;
+}
+
+.content-container {
+    width: 400px; /* Розрахунок ширини для 3-х контейнерів в одному ряду */
+    margin: 10px; 
+    background-color: #caf4a7; /* Фон контейнера */
+    border-radius: 20px; /* Заокруглені кути */
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для контейнера */
+    overflow: hidden; /* Запобігає виступанню вмісту за межі контейнера */
+}
+
+
+ .content{
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+.kurse{
+    padding-left: 20px;
+}
+
+.text{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+
+/* Для планшетних екранів (менше 960 пікселів) */
+@media screen and (max-width: 960px) {
+    .content-container {
+        width: 50%; /* Розділити на дві колонки на планшетних екранах */
+    }
+}
+
+/* Для мобільних екранів */
+@media screen and (max-width: 768px) {
+    .content-container {
+        width: 100%; /* Розміщувати картки в одну колонку на мобільних екранах */
+    }
+}
+
+
+.content-container:hover {
+    transform: scale(1.05); /* Збільшити картку на 5% при наведенні */
+    transition: transform 0.3s ease; /* Зробити анімацію плавною */
+}
+
+/* Сховати меню на десктопних екранах і показати кнопку меню на мобільних екранах */
+.mobile-menu {
+    display: none;
+}
+
+/* Для мобільних екранів */
+@media screen and (max-width: 768px) {
+    .header {
+        justify-content: space-between; /* Перемістити кнопку меню праворуч */
+    }
+    
+    /* Сховати навігацію на мобільних екранах і показати кнопку меню */
+    .main, .aboutUs, .contacts {
+        display: none;
+    }
+
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        z-index: 999;
+        flex-direction: column; /* Виправлення стилю для колонки */
+    }
+    
+    .mobile-menu a {
+        display: block;
+        margin-bottom: 10px;
+        color: #3498db;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    /* Показати випадаюче меню при наведенні на кнопку */
+    .mobile-menu-button:hover + .mobile-menu {
+        display: block;
+    }
+}
+
